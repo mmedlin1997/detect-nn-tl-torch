@@ -1,2 +1,7 @@
 # detect-nn-tl-torch
-Object detection customizing some neural networks with transfer learning on PyTorch framework
+Object detection neural networks transfer learning demo using PyTorch framework.
+
+Usage
+```bash
+python app.py -d cuda
+```
