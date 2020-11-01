@@ -1,9 +1,20 @@
-import torchvision
-from PIL import Image
 from torchvision import transforms as T
 import cv2
 import matplotlib.pyplot as plt
+from PIL import Image
+from platform import python_version
+import sys
 
+# Function to show module versions
+def show_versions():
+  print("Versions...")
+  print("python", python_version())
+  print("torchvision", sys.modules[T.__package__].__version__)
+  print("matplotlib", sys.modules[plt.__package__].__version__)
+  print("cv2", cv2.__version__)
+  print()
+show_versions()
+exit()
 # Model
 model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
 model.eval()
